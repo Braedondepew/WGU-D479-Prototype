@@ -2,9 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Taniti Island</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div class="mobile-container">
+
+    <div id="home-screen" class="screen active-screen">
+        <div class="header">
+            <button class="emergency-btn" onclick="alert('Emergency & Hospital Info Accessed')">🚨</button>
+            <span>Taniti Island</span>
+            <button class="menu-btn" onclick="goToScreen('menu-screen')">☰</button>
+        </div>
+        <div class="img-placeholder">
+            Image
+        </div>
+        <ul>
+            <li><span class="link" onclick="alert('Bus Schedule Accessed')">Bus Schedule</span></li>
+            <li><span class="link" onclick="goToScreen('activities-screen')">Family Activities</span></li>
+            <li><span class="link">Grocery & Dining</span></li>
+            <li><span class="link" onclick="alert('Emergency Info Accessed')">Emergency Info</span></li>
+        </ul>
+    </div>
+
+    <div id="menu-screen" class="screen">
+        <div class="header">
+            <span>Taniti Island</span>
+            <button class="menu-btn" onclick="goToScreen('home-screen')">X</button>
+        </div>
+        <ul>
+            <li><span class="link">> Stay: Hotels and More</span></li>
+            <li><span class="link">> Eat: Grocery and Dining</span></li>
+            <li><span class="link" onclick="goToScreen('activities-screen')">> Activities: Family Fun</span></li>
+            <li><span class="link">> Transit: Bus & More</span></li>
+            <li><span class="link">> Help: FAQ & Safety Info</span></li>
+        </ul>
+    </div>
+
+    <div id="activities-screen" class="screen">
+        <div class="header">
+            <button class="emergency-btn" onclick="alert('Emergency & Hospital Info Accessed')">🚨</button>
+            <span>Taniti Island</span>
+            <button class="menu-btn" onclick="goToScreen('menu-screen')">☰</button>
+        </div>
+        <h2 style="text-align: center;">Island Activities</h2>
+
+        <div class="filter-section">
+            <label for="filter">Filter: </label>
+            <select id="filter">
+                <option value="all">All Activities</option>
+                <option value="family">Family-Friendly</option>
+            </select>
+        </div>
+
+        <div class="activity-card">
+            <div class="img-placeholder small-img">Image</div>
+            <div class="activity-info">
+                <h3>History Museum</h3>
+                <span class="link">Directions</span><br>
+                <button class="btn-green" onclick="alert('Booking Confirmed for History Museum!')">Book Now</button>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="img-placeholder small-img">Image</div>
+            <div class="activity-info">
+                <h3>Arcade</h3>
+                <span class="link">Directions</span>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <span class="link">FAQ & Safety Info</span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function goToScreen(screenId) {
+        // Hide all screens
+        const screens = document.querySelectorAll('.screen');
+        screens.forEach(screen => {
+            screen.classList.remove('active-screen');
+        });
+
+        // Show the requested screen
+        document.getElementById(screenId).classList.add('active-screen');
+    }
+</script>
 
 </body>
 </html>

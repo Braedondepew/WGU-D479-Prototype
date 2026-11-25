@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: grey;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: #fff;
+}
+
+.menu-btn {
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.emergency-btn {
+    cursor: pointer;
+    color: red;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.screen {
+    display: none;
+    flex-grow: 1;
+    padding: 5%;
+}
+
+.active-screen {
+    display: block;
+}
+
+.img-placeholder {
+    border: 2px dashed darkred;
+    color: darkred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #fdf8f8;
+    border-radius: 8px;
+}
+
+#home-screen .img-placeholder {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+li {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+li:hover {
+    background: #e2e2e2;
+}
+
+.link {
+    color: #2E8B57;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.activity-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.small-img {
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.activity-info h3 {
+    margin: 0 0 10px 0;
+    color: #2E8B57;
+    font-size: 1.3rem;
+}
+
+.btn-green {
+    color: white;
+    background-color: #2E8B57;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-green:hover {
+    background-color: #246e45;
+}
+
+.filter-section {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.filter-section select {
+    padding: 5px 10px;
+    font-size: 1rem;
+}
